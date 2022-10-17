@@ -4,12 +4,21 @@ import AddTask from './components/AddTask';
 class App extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      tasks: [],
+    };
+  }
+
+  createTask(event, newTask) {
+    const { tasks } = this.state;
+    this.setState({
+      tasks: [...tasks, newTask],
+    });
   }
 
   render() {
     return (
-      <AddTask />
+      <AddTask onCreate={this.createTask} />
     );
   }
 }
