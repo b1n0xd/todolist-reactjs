@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AddTask from './components/AddTask';
 
 class App extends Component {
   constructor() {
@@ -8,11 +9,7 @@ class App extends Component {
 
   render() {
     return (
-      <form>
-        <input type="text" placeholder="Type item here" onChange={(event) => console.log(event.target.value)} />
-        <button type="button">Add</button>
-      </form>
-
+      <AddTask />
     );
   }
 }
