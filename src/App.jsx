@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 
-class App extends React.Component {
-  constructor(){
+class App extends Component {
+  constructor() {
     super();
-    this.state = {
-      newItem: "",
-      list: []
-    }
+    this.state = {};
   }
+
   render() {
     return (
-    <h1> React On Fire</h1>
-  );
+      <form>
+        <input type="text" placeholder="Type item here" onChange={(event) => console.log(event.target.value)} />
+        <button type="button">Add</button>
+      </form>
+
+    );
+  }
 }
 
 export default App;
