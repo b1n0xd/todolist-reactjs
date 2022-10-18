@@ -1,0 +1,60 @@
+{
+    "editor.fontSize": 15,
+    "explorer.confirmDelete": false,
+    "tabnine.experimentalAutoImports": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.runInTerminal": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Dracula At Night",
+    "kite.showWelcomeNotificationOnStartup": false,
+    "git.autofetch": true,
+    "terminal.integrated.bellDuration": 99999,
+    "terminal.external.linuxExec": "/bin/zsh",
+    "workbench.activityBar.visible": false,
+    "editor.stickyScroll.enabled": true,
+    "editor.fontFamily": "Fira Code Retina",
+    "editor.fontLigatures": true,
+    "editor.autoClosingBrackets": "always",
+    "editor.inlineSuggest.enabled": true,
+    "editor.formatOnSave": true,
+    "code-runner.executorMap": {
+      "python": "clear ; .\\venv\\Scripts\\python.exe"
+    },
+    // Python
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.python",
+      "editor.tabSize": 4,
+      "editor.insertSpaces": true,
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      }
+    },
+    "python.languageServer": "Pylance",
+    "python.formatting.autopep8Args": [
+      "--indent-size=4"
+      // "--ignore=E111",
+    ],
+    "python.linting.flake8Args": [
+      // "--ignore=E111",
+    ],
+    "python.linting.pylintArgs": [
+      "--load-plugins=pylint_django",
+      "--errors-only"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.testing.unittestEnabled": false, //for using pytest
+    "python.linting.mypyEnabled": true, // to check my code 
+    "python.defaultInterpreterPath": "python",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active", 
+    "bracket-pair-colorizer-2.colors": [ "Gold", "Orchid", "LightSkyBlue" ],
+    "bracket-pair-colorizer-2.forceUniqueOpeningColor": true,
+    "recommendations": [
+        "EduardoPires.vscode-status-bar-custom-item"
+    ]
+}
