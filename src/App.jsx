@@ -23,7 +23,7 @@ class App extends Component {
       <>
         <AddTask onCreate={this.createTask} />
         {tasks.map((task) => (
-          <h1 key={task.title}>{task.title}</h1>
+          <h1 key={task.id}>{task.title}</h1>
         )) }
       </>
 

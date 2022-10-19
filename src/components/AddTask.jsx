@@ -1,16 +1,19 @@
-/* eslint-disable linebreak-style */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import generators from '../lib/generetors';
+import generators from '../lib/generators';
 
 export default class AddTask extends Component {
   constructor() {
     super();
+
     this.initialState = {
       id: 0,
       title: '',
     };
+    this.state = this.initialState;
+
     this.handleInput = this.handleInput.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInput(event) {
@@ -22,11 +25,13 @@ export default class AddTask extends Component {
   }
 
   handleSubmit(event) {
-    event.preventeDefault();
+    event.preventDefault();
     const { onCreate } = this.props;
-    onCreate(this.state);
-    this.setState({this.initialState});
-    this.handleSubmit = this.handleSubmit.bind(this);
+    const { id } = this.state;
+    if (id > 0) {
+      onCreate(this.state);
+      this.setState(this.initialState);
+    }
   }
   // eslint-disable-next-line lines-between-class-members
   render() {
