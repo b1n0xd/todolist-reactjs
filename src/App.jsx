@@ -9,6 +9,7 @@ class App extends Component {
       tasks: [],
     };
     this.createTask = this.createTask.bind(this);
+    this.removeTask = this.removeTask.bind(this);
   }
 
   createTask(newTask) {
@@ -19,7 +20,11 @@ class App extends Component {
   }
 
   removeTask(id) {
-
+      const { tasks } = this.state;
+      const updatedTasks = tasks.filter((task) => task.id !== id);
+      this.setState({
+        tasks: updatedTasks,
+      })
   }
 
   render() {
