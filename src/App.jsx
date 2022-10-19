@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AddTask from './components/AddTask';
+import Task from './components/Task';
 
 class App extends Component {
   constructor() {
@@ -17,13 +18,21 @@ class App extends Component {
     });
   }
 
+  removeTask(id) {
+
+  }
+
   render() {
     const { tasks } = this.state;
     return (
       <>
         <AddTask onCreate={this.createTask} />
         {tasks.map((task) => (
-          <h1 key={task.id}>{task.title}</h1>
+         <Task 
+         key={task.id} 
+         data={task}
+         onRemove={this.removeTask}
+         />
         )) }
       </>
 
