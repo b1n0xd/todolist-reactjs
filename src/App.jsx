@@ -19,6 +19,10 @@ class App extends Component {
     });
   }
 
+  updatedTask(){
+
+  }
+
   removeTask(id) {
       const { tasks } = this.state;
       const updatedTasks = tasks.filter((task) => task.id !== id);
@@ -36,6 +40,7 @@ class App extends Component {
          <Task 
          key={task.id} 
          data={task}
+         onUpdate={this.updatedTask}
          onRemove={this.removeTask}
          />
         )) }
