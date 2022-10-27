@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import generators from '../lib/generators';
 
 export default class AddTask extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.initialState = {
       id: 0,
       title: '',
-      hasfinished: false,
+      hasFinished: false,
     };
     this.state = this.initialState;
 

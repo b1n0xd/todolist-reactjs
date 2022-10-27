@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 export default class Task extends Component {
-    constructor(){
-        super();
-
+    constructor(props){
+        super(props);
+        const { data } = this.props;
         this.state = {
+          id: this.props.data.id,
           hasFinished: false,
         };
         this.handleCheckbox = this.handleCheckbox.bind(this);
@@ -20,7 +21,6 @@ export default class Task extends Component {
           currentState,
           hasFinished: event.target.checked,
         });
-
     }
   render(){
     const { hasFinished } = this.props;
